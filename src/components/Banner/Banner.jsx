@@ -3,7 +3,7 @@ import man from '../../assets/lottie/man-anim.json'
 
 const Banner = () => {
   return (
-    <div className="screen-lg grid grid-cols-1 md:grid-cols-2 items-center">
+    <div className="screen-lg grid grid-cols-1 md:grid-cols-2 items-center mb-[120px]">
       <div className="">
         <p className="font-bold text-secondary text-[60px] mb-8">We are the best agency in the world</p>
         <p className="text-[18px] text-secondary mb-10">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
