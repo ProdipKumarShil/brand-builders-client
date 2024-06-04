@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import menu from '../../assets/icons/menu.svg'
 
 const Header = () => {
@@ -7,10 +8,10 @@ const Header = () => {
         {/* logo */}
         <h1 className="font-bold text-3xl">Logo</h1>
         <div className="md:flex gap-10 hidden">
-          <p>Home</p>
-          <p>Service</p>
-          <p>About Us</p>
-          <p>Portfolio</p>
+          <Link to='/' >Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/about-us">About Us</Link>
+          <Link to="/portfolio">Portfolio</Link>
         </div>
         <div className="">
           <button className="hidden md:block w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium">Contact</button>
