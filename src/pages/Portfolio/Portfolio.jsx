@@ -35,7 +35,7 @@ const Portfolio = () => {
 
 export default Portfolio
 
-const PortfolioCard = ({ img, }) => {
+export const PortfolioCard = ({ img, }) => {
   return (
     <div className="p-5 shadow-lg rounded">
       <img className='w-full object-cover mb-6 shadow' src={img} alt="" />
