@@ -26,10 +26,10 @@ const AboutUs = () => {
   return (
     <div className='screen-lg grid grid-cols-1 md:grid-cols-2 py-[120px] items-center'>
       <motion.div
-        initial={{opacity: 0, x: -100}}
-        viewport={{once: true, amount: 0.5}}
+        initial={{ opacity: 0, x: -100 }}
+        viewport={{ once: true, amount: 0.5 }}
         whileInView={{
-          opacity: 1, 
+          opacity: 1,
           x: 0,
           transition: {
             duration: 1
