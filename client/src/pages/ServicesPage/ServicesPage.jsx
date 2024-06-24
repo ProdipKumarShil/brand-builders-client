@@ -1,8 +1,11 @@
 import phone from '../../assets/icons/phone.svg'
 import message from '../../assets/icons/message.svg'
 import location from '../../assets/icons/location.svg'
+import { useGetServicesQuery } from '../../redux/api/api'
 
 const ServicesPage = () => {
+  const {isError, data, isLoading} = useGetServicesQuery()
+  console.log({isError, data, isLoading})
   return (
     <div className="screen-lg grid grid-cols-1 md:grid-cols-2 p-10 gap-4">
       <div className="text-[#333333]">
