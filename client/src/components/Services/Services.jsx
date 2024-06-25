@@ -45,7 +45,7 @@ const Services = () => {
         initial="initial"
         viewport={{ once: true, amount: 0.2 }}
         whileInView="animate"
-        className="screen-lg grid grid-cols-1 md:grid-cols-4 gap-4">
+        className="screen-lg grid grid-cols-1 md:grid-cols-4 gap-4 overflow-y-hidden">
         <ServiceCard childVarient={child} img={web} heading="Web Design" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         <ServiceCard childVarient={child} img={seo} heading="Seo Marketing" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         <ServiceCard childVarient={child} img={ux} heading="UI/UX Design" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />

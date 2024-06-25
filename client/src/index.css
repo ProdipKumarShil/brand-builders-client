@@ -13,5 +13,5 @@
 }
 
 .screen-lg {
-  @apply max-w-screen-xl mx-auto px-2
+  @apply max-w-screen-xl mx-auto px-2 overflow-x-hidden
 }

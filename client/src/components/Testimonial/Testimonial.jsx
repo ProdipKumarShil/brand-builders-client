@@ -40,7 +40,7 @@ const Testimonial = () => {
         viewport={{once: true, amount: 0.4}}
         initial='initial'
         whileInView='animate'
-        className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-hidden">
         <ReviewCard childVarient={childVarient} />
         <ReviewCard childVarient={childVarient} />
         <ReviewCard childVarient={childVarient} />

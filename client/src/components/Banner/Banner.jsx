@@ -50,7 +50,7 @@ const Banner = () => {
             duration: 1
           }
         }}
-       className="">
+       className="-z-30">
         <Lottie animationData={man} />
       </motion.div>
     </div>
