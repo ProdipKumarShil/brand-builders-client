@@ -22,6 +22,7 @@ const child = {
 }
 
 const Services = () => {
+  
   return (
     <motion.div
       initial={{opacity: 0, y: 50}}

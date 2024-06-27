@@ -8,8 +8,8 @@ const Banner = () => {
     initial: { },
     animate: { 
       transition: {
-        staggerChildren: 1,
-        duration: 2,
+        staggerChildren: 0.3,
+        duration: 1,
       }
      }
   }

@@ -1,6 +1,7 @@
 import img from '../../assets/img/houter.png'
 import more from '../../assets/icons/read-more.svg'
 import LetsTalk from '../../components/LetsTalk/LetsTalk'
+import { motion } from 'framer-motion'
 
 const Portfolio = () => {
   return (
@@ -35,15 +36,18 @@ const Portfolio = () => {
 
 export default Portfolio
 
-export const PortfolioCard = ({ img, }) => {
+export const PortfolioCard = ({ img, childVariant }) => {
   return (
-    <div className="p-5 shadow-lg rounded">
+    <motion.div
+      variants={childVariant}
+      className="p-5 shadow-lg rounded"
+    >
       <img className='w-full object-cover mb-6 shadow' src={img} alt="" />
       <div className="">
         <p className='text-[32px] font-bold text-black mb-5'>Hotel Booking Website</p>
         <p className='text-[14px] text-[#494949] mb-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum, </p>
         <p className='text-[18px] font-semibold text-secondary flex items-center gap-3'>Read More <img className='h-[14px] ' src={more} alt="" /> </p>
       </div>
-    </div>
+    </motion.div>
   )
 }
