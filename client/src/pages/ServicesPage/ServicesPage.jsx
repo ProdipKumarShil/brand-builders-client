@@ -1,7 +1,7 @@
 import phone from '../../assets/icons/phone.svg'
 import message from '../../assets/icons/message.svg'
 import location from '../../assets/icons/location.svg'
-import { useAddServiceMutation, useGetServicesQuery } from '../../redux/api/api'
+import { useAddServiceMutation } from '../../redux/api/api'
 import { useForm } from 'react-hook-form'
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from 'react'

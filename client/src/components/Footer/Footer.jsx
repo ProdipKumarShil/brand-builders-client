@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import fb from '../../assets/icons/fb-squ.svg'
 import insta from '../../assets/icons/insta-squ.svg'
 import linked from '../../assets/icons/linked-squ.svg'
@@ -41,7 +42,7 @@ const Footer = () => {
             <p className='text-[18px] text-[#494949]'>About Us</p>
             <p className='text-[18px] text-[#494949]'>Blog</p>
             <p className='text-[18px] text-[#494949]'>Services</p>
-            <p className='text-[18px] text-[#494949]'>Contact Us</p>
+            <p className='text-[18px] text-[#494949]'><Link to='/dashboard'>Admin Panel</Link></p>
           </div>
         </div>
         {/* menu */}
