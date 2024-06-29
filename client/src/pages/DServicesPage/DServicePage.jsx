@@ -1,17 +1,22 @@
 import React from 'react'
 import services from '../../assets/icons/services.svg'
-import { useGetServicesQuery } from '../../redux/api/api'
+import { useDeleteServiceMutation, useGetServicesQuery } from '../../redux/api/api'
 import deleteImg from '../../assets/icons/delete.svg'
 import Swal from 'sweetalert2'
 import moment from 'moment'
 
 const DServicePage = () => {
-  const { isLoading, data, error } = useGetServicesQuery()
+  const { isLoading, data, error, refetch } = useGetServicesQuery()
+  if (isLoading){
+    return(
+      <p>Loading...</p>
+    )
+  }
   return (
-    <div>
+    <div className=''>
       <div className="flex gap-2 items-center pb-5">
         <img className='size-8' src={services} alt="" />
-        <p className='text-[24px] font-medium ' >Service Page</p>
+        <p className='text-[24px] font-medium ' >Service Page {data?.count}</p>
       </div>
       <div className="overflow-x-auto">
         <table className="table">
@@ -29,7 +34,7 @@ const DServicePage = () => {
           <tbody>
             {/* row 1 */}
             {
-              data?.services?.map(service => <TH key={service._id} service={service} />)
+              data?.services?.map(service => <TH key={service._id} service={service} refetch={refetch} />)
             }
           </tbody>
         </table>
@@ -40,10 +45,10 @@ const DServicePage = () => {
 
 export default DServicePage
 
-const TH = ({service}) => {
-  console.log()
-  const handleDelete = () => {
-    
+const TH = ({ service, refetch }) => {
+  const [deleteService] = useDeleteServiceMutation()
+  console.log((service?.name).split('')[0])
+  const handleDelete = async () => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -52,15 +57,24 @@ const TH = ({service}) => {
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
+    }).then(async (result) => {
       if (result.isConfirmed) {
-        console.log(service?._id)
-        console.log('deleted!')
-        Swal.fire({
-          title: "Deleted!",
-          text: "Your file has been deleted.",
-          icon: "success"
-        });
+        try {
+          await deleteService(service._id).unwrap()
+          refetch()
+
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+        } catch (error) {
+          Swal.fire({
+            title: "Failed!",
+            text: "Your file has been deleted.",
+            icon: "error"
+          });
+        }
       }
     });
   }
@@ -70,7 +84,7 @@ const TH = ({service}) => {
         <div className="flex items-center gap-3">
           <div className="avatar">
             <div className="mask mask-squircle h-12 w-12">
-              <div className="size-12 bg-emerald-500 flex items-center justify-center text-white text-xl font-bold"><span>P</span></div>
+              <div className="size-12 bg-emerald-500 flex items-center justify-center text-white text-xl font-bold"><span>{(service?.name).split('')[0]}</span></div>
             </div>
           </div>
           <div>

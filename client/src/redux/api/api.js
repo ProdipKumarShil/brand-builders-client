@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const brandApi = createApi({
   reducerPath: 'brandApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'https://brand-builders-solution.vercel.app' }), // https://brand-builders-solution.vercel.app/
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }), // https://brand-builders-solution.vercel.app/  http://localhost:5000/
   endpoints: (builder) => ({
     getServices: builder.query({
       query: () => 'service/services',
@@ -13,6 +13,12 @@ export const brandApi = createApi({
         method: "POST",
         body: newService
       })
+    }),
+    deleteService: builder.mutation({
+      query: (id) => ({
+        url: `/service/service/${id}`,
+        method: 'DELETE'
+      })
     })
   })
 })
@@ -20,5 +26,6 @@ export const brandApi = createApi({
 export const {
   // useGetServicesQuery
   useGetServicesQuery,
-  useAddServiceMutation
+  useAddServiceMutation,
+  useDeleteServiceMutation
 } = brandApi

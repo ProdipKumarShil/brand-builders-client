@@ -7,7 +7,7 @@ const DashboardLayout = () => {
     <div className="h-screen">
       {/* <div className="w-full h-[10vh] bg-green-700"></div> */}
       <div className='grid grid-cols-12'>
-        <div className="w-full  h-screen   col-span-2">
+        <div className="w-full  h-screen  col-span-2">
           <div className="flex items-center gap-4 p-5">
             <img className='size-8' src={setting} alt="" />
             <p className='font-semibold text-[26px]'>Dashboard</p>
@@ -18,7 +18,7 @@ const DashboardLayout = () => {
           </ul>
         </div>
 
-        <div className="col-span-10 bg-[#f7faff] p-6">
+        <div className="col-span-10 bg-[#f7faff] p-6 overflow-hidden">
           <Outlet />
         </div>
       </div>
