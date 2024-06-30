@@ -1,6 +1,6 @@
 import React from 'react'
 import services from '../../assets/icons/services.svg'
-import { useDeleteServiceMutation, useGetServicesQuery } from '../../redux/api/api'
+import { useDeleteServiceMutation, useGetServicesQuery, useUpdateServiceMutation } from '../../redux/api/api'
 import deleteImg from '../../assets/icons/delete.svg'
 import Swal from 'sweetalert2'
 import moment from 'moment'
@@ -50,6 +50,7 @@ export default DServicePage
 
 const TH = ({ service, refetch }) => {
   const [deleteService] = useDeleteServiceMutation()
+  const [updateService] = useUpdateServiceMutation()
   const handleDelete = async () => {
     Swal.fire({
       title: "Are you sure?",
@@ -92,8 +93,8 @@ const TH = ({ service, refetch }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          // await deleteService(service._id).unwrap()
-          // refetch()
+          await updateService(service.email).unwrap()
+          refetch()
           console.log('complete')
 
           Swal.fire({
@@ -111,7 +112,7 @@ const TH = ({ service, refetch }) => {
       }
     });
   }
-  
+
   const handleStatus = () => {
     if (service?.status === 'success') {
       return true
@@ -150,7 +151,7 @@ const TH = ({ service, refetch }) => {
       <th>
         <div className="flex  items-center gap-2">
           <button onClick={handleDelete} className=' p-[6px] mask btn mask-squircle bg-red-500'><img className='size-4' src={deleteImg} alt="" /></button>
-          <button onClick={handleSuccess} className=' p-[6px] mask btn mask-squircle bg-green-500'><img className='size-4' src={check} alt="" /></button>
+          <button onClick={handleSuccess} disabled={handleStatus()} className=' p-[6px] mask btn mask-squircle bg-green-500'><img className='size-4' src={check} alt="" /></button>
         </div>
       </th>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}

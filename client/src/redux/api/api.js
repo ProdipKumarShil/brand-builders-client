@@ -19,6 +19,13 @@ export const brandApi = createApi({
         url: `/service/service/${id}`,
         method: 'DELETE'
       })
+    }),
+    updateService: builder.mutation({
+      query: (email) => ({
+        url: `/service/service/${email}`,
+        method: 'PATCH',
+        body: {status: 'success'}
+      })
     })
   })
 })
@@ -27,5 +34,6 @@ export const {
   // useGetServicesQuery
   useGetServicesQuery,
   useAddServiceMutation,
-  useDeleteServiceMutation
+  useDeleteServiceMutation,
+  useUpdateServiceMutation
 } = brandApi

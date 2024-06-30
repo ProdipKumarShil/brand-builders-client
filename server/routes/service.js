@@ -25,10 +25,7 @@ router.patch('/service/:email', async (req, res) => {
   try {
     const email = req.params.email
     const updateData = req.body.status
-    console.log(email)
-    console.log(updateData)
     const result = await Service.findOneAndUpdate({ email: email }, { status: updateData })
-    console.log(result)
     res.status(200).send({ status: true, message: 'Successfully updated' })
   } catch (err) {
     res.status(200).send({ status: false, message: 'Something went wrong!' })
