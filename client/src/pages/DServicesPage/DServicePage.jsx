@@ -4,11 +4,13 @@ import { useDeleteServiceMutation, useGetServicesQuery } from '../../redux/api/a
 import deleteImg from '../../assets/icons/delete.svg'
 import Swal from 'sweetalert2'
 import moment from 'moment'
+import check from '../../assets/icons/check.svg'
 
 const DServicePage = () => {
   const { isLoading, data, error, refetch } = useGetServicesQuery()
-  if (isLoading){
-    return(
+  console.log(data)
+  if (isLoading) {
+    return (
       <p>Loading...</p>
     )
   }
@@ -27,8 +29,9 @@ const DServicePage = () => {
               <th>Email</th>
               <th>Date</th>
               <th>Service</th>
+              <th>Status</th>
               <th>Message</th>
-              <th>Delete</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -47,7 +50,6 @@ export default DServicePage
 
 const TH = ({ service, refetch }) => {
   const [deleteService] = useDeleteServiceMutation()
-  console.log((service?.name).split('')[0])
   const handleDelete = async () => {
     Swal.fire({
       title: "Are you sure?",
@@ -78,6 +80,45 @@ const TH = ({ service, refetch }) => {
       }
     });
   }
+  const handleSuccess = async () => {
+    Swal.fire({
+      title: "Are you complete that?",
+      text: "Should you properly complete and submit your work?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: " #16a34a",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, complete it!"
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try {
+          // await deleteService(service._id).unwrap()
+          // refetch()
+          console.log('complete')
+
+          Swal.fire({
+            title: "Congratulation!",
+            text: "Your work has been completed.",
+            icon: "success"
+          });
+        } catch (error) {
+          Swal.fire({
+            title: "Failed!",
+            text: "Your work hasn't completed.",
+            icon: "error"
+          });
+        }
+      }
+    });
+  }
+  
+  const handleStatus = () => {
+    if (service?.status === 'success') {
+      return true
+    } else {
+      return false
+    }
+  }
   return (
     <tr>
       <td>
@@ -97,11 +138,20 @@ const TH = ({ service, refetch }) => {
       </td>
       <td>{moment(service?.date).format('MMMM Do YYYY')}</td>
       <td>{service?.service}</td>
+      <td>
+        <div className="flex items-center gap-2">
+          {handleStatus() ? <div className="size-3 rounded-full bg-green-500"></div> : <div className="size-3 rounded-full bg-red-500"></div>}
+          <div className="">{(service?.status).toUpperCase()}</div>
+        </div>
+      </td>
       <th>
         <button onClick={() => document.getElementById(`${service?._id}`).showModal()} className="btn btn-ghost btn-xs">details</button>
       </th>
       <th>
-        <button onClick={handleDelete} className=' p-2 mask btn mask-squircle bg-red-500'><img className='size-5' src={deleteImg} alt="" /></button>
+        <div className="flex  items-center gap-2">
+          <button onClick={handleDelete} className=' p-[6px] mask btn mask-squircle bg-red-500'><img className='size-4' src={deleteImg} alt="" /></button>
+          <button onClick={handleSuccess} className=' p-[6px] mask btn mask-squircle bg-green-500'><img className='size-4' src={check} alt="" /></button>
+        </div>
       </th>
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
       {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button> */}
