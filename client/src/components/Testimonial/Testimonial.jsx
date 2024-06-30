@@ -32,7 +32,7 @@ const Testimonial = () => {
   return (
     <div className="screen-lg py-[120px]">
       <p className="font-bold text-[48px] text-black mb-6">Customer testimonials</p>
-      <p className="text-[#494949] mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p className="text-[#494949] mb-12">Discover what our clients say about their experience with Brand Builders Solution.</p>
 
       {/* Review cards */}
       <motion.div
@@ -40,7 +40,7 @@ const Testimonial = () => {
         viewport={{once: true, amount: 0.4}}
         initial='initial'
         whileInView='animate'
-        className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-hidden">
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-hidden overflow-x-hidden p-5">
         <ReviewCard childVarient={childVarient} />
         <ReviewCard childVarient={childVarient} />
         <ReviewCard childVarient={childVarient} />

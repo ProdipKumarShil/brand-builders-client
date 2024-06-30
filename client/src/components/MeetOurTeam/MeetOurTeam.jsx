@@ -25,7 +25,7 @@ const MeetOurTeam = () => {
         <div className="text-center mb-20">
           <p className="text-secondary font-semibold mb-4">Meet Our Team</p>
           <p className="text-[48px] font-bold mb-8">Our Expert Members </p>
-          <p className="text-[#494949]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Diam vivamus pretium maecenas amet.</p>
+          <p className="text-[#494949]">Meet the dedicated experts at Brand Builders Solution, <br /> committed to delivering tailored digital solutions for your success</p>
         </div>
 
         {/* img cards */}

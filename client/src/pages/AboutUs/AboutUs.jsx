@@ -49,8 +49,8 @@ const AboutUs = () => {
           className="">
           <motion.p variants={childVariant} className='text-[20px] font-semibold text-[#333333] mb-4'>About US</motion.p>
           <motion.p variants={childVariant} className='text-[48px] font-bold text-[#333333] mb-6'>We are a creative agency</motion.p>
-          <motion.p variants={childVariant} className='text-secondary mb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec, luctus sapien vulputate urna tempor euismod adipiscing massa. Volutpat nunc quis dictum consectetur egestas varius. </motion.p>
-          <motion.p variants={childVariant} className='text-secondary mb-10'>Ac sagittis tellus, sodales commodo elit, sociis purus. Egestas mauris eget commodo commodo et vel fermentum ultrices.</motion.p>
+          <motion.p variants={childVariant} className='text-secondary mb-4'>At Brand Builders Solution, we are dedicated to empowering businesses with cutting-edge digital solutions. With a focus on innovation and excellence, we specialize in strategic marketing, SEO, creative design, web development, and reliable IT support. Our mission is to drive your success in the digital world, ensuring your brand stands out and thrives.</motion.p>
+          <motion.p variants={childVariant} className='text-secondary mb-10'>Join us as we collaborate to elevate your digital presence and achieve your business goals effectively and efficiently</motion.p>
           <motion.button variants={childVariant} className="btn w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium">More About Us</motion.button>
         </motion.div>
       </div>

@@ -7,14 +7,14 @@ const Portfolio = () => {
     <div>
       <div className="bg-primary py-[120px] text-center pb-20">
         <p className="font-bold text-white text-[60px] mb-5">Our Portfolio</p>
-        <p className="text-[18px] text-white">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. <br /> Velit officia consequat duis enim velit mollit. Exercitation veniam </p>
+        <p className="text-[18px] text-white">Explore our showcase of successful projects at Brand Builders Solution <br /> demonstrating our expertise in digital marketing, web development, design, and more</p>
       </div>
       <div className="bg-primary bg-opacity-5">
         <div className="screen-lg pb-[120px] ">
           <div className="py-20 text-center">
             <p className="text-[20px] font-semibold mb-4">Portfolio</p>
             <p className="text-[48px] font-bold text-black mb-6">Our recent works</p>
-            <p className="text-[#494949]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt mi blandit et ac elit eros, viverra. <br /> Elementum pellentesque sed scelerisque pellentesque auctor accumsan, <br /> velit posuere eget. </p>
+            <p className="text-[#494949]">Discover our latest projects at Brand Builders Solution, showcasing innovative digital strategies and <br /> successful client collaborations in marketing, design, web development, and more</p>
           </div>
           {/* portfolio card */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-[32px]">

@@ -8,7 +8,7 @@ const parent = {
   initial: {},
   animate: {
     transition: {
-      staggerChildren: 0.6,
+      staggerChildren: 0.3,
       type: 'spring',
       dumping: 1000,
       delayChildren: 0.5
@@ -36,7 +36,7 @@ const Services = () => {
         <div className="text-center">
           <p className="font-semibold text-secondary text-[20px] mb-[20px]">Services</p>
           <p className="font-bold text-[48px] text-secondary mb-8">We Provide</p>
-          <p className="text-[16px] text-[#494949]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus mattis nunc <br /> aliquam tincidunt est non. Viverra nec eu.</p>
+          <p className="text-[16px] text-[#494949]">Explore our digital services marketing, SEO, design, web development, and IT support. <br /> Elevate your brand with us today!</p>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ const Services = () => {
         initial="initial"
         viewport={{ once: true, amount: 0.2 }}
         whileInView="animate"
-        className="screen-lg grid grid-cols-1 md:grid-cols-4 gap-4 overflow-y-hidden">
+        className="screen-lg grid grid-cols-1 md:grid-cols-4 gap-4 overflow-y-hidden p-5">
         <ServiceCard childVarient={child} img={web} heading="Web Design" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         <ServiceCard childVarient={child} img={seo} heading="Seo Marketing" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
         <ServiceCard childVarient={child} img={ux} heading="UI/UX Design" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />

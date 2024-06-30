@@ -8,6 +8,11 @@ import deleteImg from '../../assets/icons/delete.svg'
 const Dashboard = () => {
   const { data, isLoading, isError } = useGetServicesQuery()
   const completedServices = data?.services?.filter(completeService => completeService?.status === 'success')
+  if (isLoading) {
+    return (
+      <div className="flex py-5 justify-center col-span-10 p-0"><span className="loading loading-spinner loading-lg"></span></div>
+    )
+  }
   return (
     <div>
       <div className="flex gap-2 items-center pb-5 ">

@@ -8,14 +8,13 @@ import check from '../../assets/icons/check.svg'
 
 const DServicePage = () => {
   const { isLoading, data, error, refetch } = useGetServicesQuery()
-  console.log(data)
   if (isLoading) {
     return (
-      <p>Loading...</p>
+      <div className="flex py-5 justify-center col-span-10 p-0"><span className="loading loading-spinner loading-lg"></span></div>
     )
   }
-  if(data.count === 0){
-    return(
+  if (data.count === 0) {
+    return (
       <div className="">
         <p>There are no service pending</p>
       </div>
@@ -28,6 +27,7 @@ const DServicePage = () => {
         <p className='text-[24px] font-medium ' >Service Page ({data?.count})</p>
       </div>
       <div className="overflow-x-auto">
+
         <table className="table">
           {/* head */}
           <thead>

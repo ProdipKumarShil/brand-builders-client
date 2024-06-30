@@ -13,7 +13,7 @@ const Footer = () => {
       <footer className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 screen-lg gap-16">
         <div>
           <Link to="/"><img className='w-24 mb-8' src={logo} alt="" /></Link>
-          <p className="text-[18px] text-[#494949] mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie nulla massa fringilla. </p>
+          <p className="text-[18px] text-[#494949] mb-8">Your partner in digital success. Explore our comprehensive services and transform your business today</p>
           <div className="flex gap-4">
             <img className='h-8 w-8' src={fb} alt="" />
             <img className='h-8 w-8' src={insta} alt="" />
