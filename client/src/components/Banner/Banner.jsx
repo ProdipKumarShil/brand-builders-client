@@ -37,8 +37,8 @@ const Banner = () => {
         <motion.p variants={childVarient} className="font-bold text-secondary text-[60px] mb-8">We are the best agency in the world</motion.p>
         <motion.p variants={childVarient} className="text-[18px] text-secondary mb-10">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</motion.p>
         <motion.div variants={childVarient} className="flex gap-4">
-          <Link to="/services" className="bg-primary py-3 px-9 text-white rounded text-[18px] ">Start a project</Link>
-          <Link to="/about-us" className="border border-primary py-3 px-9 text-primary rounded text-[18px] ">Learn More</Link>
+          <Link to="/services" className=" btn hover:text-primary bg-primary py-3 px-9 text-white rounded text-[18px] ">Start a project</Link>
+          <Link to="/about-us" className=" btn border border-primary py-3 px-9 text-primary rounded text-[18px] ">Learn More</Link>
         </motion.div>
       </motion.div>
       <motion.div

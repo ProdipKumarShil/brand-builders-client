@@ -51,7 +51,7 @@ const AboutUs = () => {
           <motion.p variants={childVariant} className='text-[48px] font-bold text-[#333333] mb-6'>We are a creative agency</motion.p>
           <motion.p variants={childVariant} className='text-secondary mb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec, luctus sapien vulputate urna tempor euismod adipiscing massa. Volutpat nunc quis dictum consectetur egestas varius. </motion.p>
           <motion.p variants={childVariant} className='text-secondary mb-10'>Ac sagittis tellus, sodales commodo elit, sociis purus. Egestas mauris eget commodo commodo et vel fermentum ultrices.</motion.p>
-          <motion.button variants={childVariant} className="w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium">More About Us</motion.button>
+          <motion.button variants={childVariant} className="btn w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium">More About Us</motion.button>
         </motion.div>
       </div>
       <MeetOurTeam />

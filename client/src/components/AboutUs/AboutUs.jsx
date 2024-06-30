@@ -49,7 +49,7 @@ const AboutUs = () => {
         <motion.p variants={childVarient} className='text-[48px] font-bold text-[#333333] mb-6'>We are a creative agency</motion.p>
         <motion.p variants={childVarient} className='text-secondary mb-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec, luctus sapien vulputate urna tempor euismod adipiscing massa. Volutpat nunc quis dictum consectetur egestas varius. </motion.p>
         <motion.p variants={childVarient} className='text-secondary mb-10'>Ac sagittis tellus, sodales commodo elit, sociis purus. Egestas mauris eget commodo commodo et vel fermentum ultrices.</motion.p>
-        <motion.div variants={childVarient} className='w-[200px] h-[54px]' ><Link to="/portfolio" className='w-[200px] h-[54px] block text-center py-3 rounded bg-primary text-white text-[18px] font-medium'>Explore Project</Link> </motion.div>
+        <motion.div variants={childVarient} className='w-[200px] h-[54px]' ><Link to="/portfolio" className='w-[200px] btn h-[54px] block text-center pt-4 rounded bg-primary text-white text-[18px] font-medium'>Explore Project</Link> </motion.div>
       </motion.div>
     </div>
   )

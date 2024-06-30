@@ -24,7 +24,7 @@ const Portfolio = () => {
             <PortfolioCard />
             <PortfolioCard />
           </div>
-          <button className="w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium block mx-auto">See All Portfolio</button>
+          <button className="btn w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium block mx-auto">See All Portfolio</button>
         </div>
       </div>
 

@@ -15,7 +15,7 @@ const Header = () => {
           <Link to="/portfolio">Portfolio</Link>
         </div>
         <div className="">
-          <Link to="/services" className="hidden md:block w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium  py-3 text-center">Contact</Link>
+          <Link to="/services" className="btn hidden md:block w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium  p-4 text-center">Contact</Link>
 
           {/* drawer */}
           <div className="drawer md:hidden">
