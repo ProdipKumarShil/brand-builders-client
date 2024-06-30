@@ -1,4 +1,4 @@
-import profilePic from '../../assets/img/profile.png'
+
 import { motion } from 'framer-motion'
 
 const MeetOurTeam = () => {
@@ -51,7 +51,7 @@ export default MeetOurTeam
 const ImgCard = ({ childVariant }) => {
   return (
     <motion.div variants={childVariant} className="relative">
-      <img className='w-full h-[380px] object-cover' src={profilePic} alt="" />
+      <img className='w-full h-[380px] object-cover' src='https://res.cloudinary.com/dwhhe5dgs/image/upload/v1719737044/brandBuildersSolution/zbbyaysnahxjlpdy4f6t.png' alt="" />
       <div className="bg-white rounded-xl p-3 shadow w-[90%] absolute -bottom-[60px] left-1/2 -translate-x-1/2">
         <p className='font-bold text-[24px] text-secondary'>Brooklyn Simmons</p>
         <p className='text-[18px] text-[#494949]'>Designer</p>

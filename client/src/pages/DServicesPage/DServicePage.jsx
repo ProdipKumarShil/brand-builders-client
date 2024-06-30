@@ -14,6 +14,13 @@ const DServicePage = () => {
       <p>Loading...</p>
     )
   }
+  if(data.count === 0){
+    return(
+      <div className="">
+        <p>There are no service pending</p>
+      </div>
+    )
+  }
   return (
     <div className=''>
       <div className="flex gap-2 items-center pb-5">

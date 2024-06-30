@@ -1,4 +1,3 @@
-import img from '../../assets/img/houter.png'
 import more from '../../assets/icons/read-more.svg'
 import LetsTalk from '../../components/LetsTalk/LetsTalk'
 import { motion } from 'framer-motion'
@@ -19,11 +18,11 @@ const Portfolio = () => {
           </div>
           {/* portfolio card */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-[32px]">
-            <PortfolioCard img={img} />
-            <PortfolioCard img={img} />
-            <PortfolioCard img={img} />
-            <PortfolioCard img={img} />
-            <PortfolioCard img={img} />
+            <PortfolioCard />
+            <PortfolioCard />
+            <PortfolioCard />
+            <PortfolioCard />
+            <PortfolioCard />
           </div>
           <button className="w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium block mx-auto">See All Portfolio</button>
         </div>
@@ -36,13 +35,13 @@ const Portfolio = () => {
 
 export default Portfolio
 
-export const PortfolioCard = ({ img, childVariant }) => {
+export const PortfolioCard = ({ childVariant }) => {
   return (
     <motion.div
       variants={childVariant}
       className="p-5 shadow-lg rounded"
     >
-      <img className='w-full object-cover mb-6 shadow' src={img} alt="" />
+      <img className='w-full object-cover mb-6 shadow' src="https://res.cloudinary.com/dwhhe5dgs/image/upload/v1719737462/houter/xvckakevgyn9jzhyb3ei.png" alt="" />
       <div className="">
         <p className='text-[32px] font-bold text-black mb-5'>Hotel Booking Website</p>
         <p className='text-[14px] text-[#494949] mb-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed consectetur malesuada sodales enim viverra odio diam. Nascetur dui elementum, </p>

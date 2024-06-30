@@ -1,7 +1,5 @@
 // import { PortfolioCard } from "../../pages/Portfolio/Portfolio"
-import img from '../../assets/img/houter.png'
 import { motion } from "framer-motion"
-import more from '../../assets/icons/read-more.svg'
 import { PortfolioCard } from '../../pages/Portfolio/Portfolio'
 
 const MoreProject = () => {
@@ -35,9 +33,9 @@ const MoreProject = () => {
         whileInView="animate"
         viewport={{once: true, amount: 0.5}}
         className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <PortfolioCard childVariant={childVariant} img={img} />
-        <PortfolioCard childVariant={childVariant} img={img} />
-        <PortfolioCard childVariant={childVariant} img={img} />
+        <PortfolioCard childVariant={childVariant} />
+        <PortfolioCard childVariant={childVariant} />
+        <PortfolioCard childVariant={childVariant} />
       </motion.div>
     </div>
   )

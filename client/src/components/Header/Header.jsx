@@ -1,20 +1,21 @@
 import { Link } from 'react-router-dom'
 import menu from '../../assets/icons/menu.svg'
+import logo from '../../assets/icons/logo.svg'
 
 const Header = () => {
   return (
     <div className="border-b">
       <div className="max-w-screen-xl px-2 py-8 mx-auto flex justify-between items-center">
         {/* logo */}
-        <h1 className="font-bold text-3xl">Logo</h1>
+        <Link to="/"><img className='w-24' src={logo} alt="" /></Link>
         <div className="md:flex gap-10 hidden">
-          <Link to='/' >Home</Link>
+          {/* <Link to='/' >Home</Link> */}
           <Link to="/services">Services</Link>
           <Link to="/about-us">About Us</Link>
           <Link to="/portfolio">Portfolio</Link>
         </div>
         <div className="">
-          <button className="hidden md:block w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium">Contact</button>
+          <Link to="/services" className="hidden md:block w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium  py-3 text-center">Contact</Link>
 
           {/* drawer */}
           <div className="drawer md:hidden">

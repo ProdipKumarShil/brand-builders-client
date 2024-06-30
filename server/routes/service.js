@@ -13,7 +13,8 @@ router.get('/services', async (req, res) => {
 router.post('/service', async (req, res) => {
   try {
     const newService = req.body
-    const result = new Service(newService)
+    const fullService = {...newService, status: 'pending'}
+    const result = new Service(fullService)
     await result.save()
     res.status(201).send({ status: true, message: 'Service Booked!' })
   } catch (error) {

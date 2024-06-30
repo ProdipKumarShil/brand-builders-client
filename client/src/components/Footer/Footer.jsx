@@ -5,13 +5,14 @@ import linked from '../../assets/icons/linked-squ.svg'
 import pin from '../../assets/icons/pin-squ.svg'
 import x from '../../assets/icons/x-squ.svg'
 import youtube from '../../assets/icons/youtube-squ.svg'
+import logo from '../../assets/icons/logo.svg'
 
 const Footer = () => {
   return (
     <div className="bg-primary bg-opacity-5 py-20">
       <footer className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 screen-lg gap-16">
         <div>
-          <h1 className="font-bold text-3xl mb-8">Logo</h1>
+          <Link to="/"><img className='w-24 mb-8' src={logo} alt="" /></Link>
           <p className="text-[18px] text-[#494949] mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie nulla massa fringilla. </p>
           <div className="flex gap-4">
             <img className='h-8 w-8' src={fb} alt="" />
@@ -54,7 +55,7 @@ const Footer = () => {
             <button className="w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium">Subscribe</button>
           </div>
         </div>
-        
+
       </footer>
     </div>
   )

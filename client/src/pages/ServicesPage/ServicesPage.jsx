@@ -5,15 +5,22 @@ import { useAddServiceMutation } from '../../redux/api/api'
 import { useForm } from 'react-hook-form'
 import ReCAPTCHA from "react-google-recaptcha";
 import { useState } from 'react'
+import Swal from 'sweetalert2'
 
 const ServicesPage = () => {
-  const { register, handleSubmit, } = useForm()
-  const [addService, {isLoading, isSuccess, isError}] = useAddServiceMutation()
-  const handleSubmitForm = async(data) => {
-    try{
+  const { register, handleSubmit, reset } = useForm()
+  const [addService, { isLoading, isSuccess, isError }] = useAddServiceMutation()
+
+  const handleSubmitForm = async (data) => {
+    try {
       await addService(data).unwrap()
-      console.log({isLoading, isSuccess, isError})
-    } catch(err){
+      Swal.fire({
+        title: "Congratulation!",
+        text: "Our team will contact you soon...!",
+        icon: "success"
+      });
+      reset()
+    } catch (err) {
       console.log(err.message)
     }
   }
@@ -86,7 +93,7 @@ const ServicesPage = () => {
               onChange={(value) => setCap(value)}
             />
           </div>
-          <button disabled={!cap} className={cap ? " w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium" : " w-[200px] h-[54px] rounded bg-gray-300 text-white text-[18px] font-medium"}>Book Service</button>
+          <button disabled={!cap} className={cap ? "btn w-[200px] h-[54px] rounded bg-primary text-white text-[18px] font-medium" : " w-[200px] h-[54px] rounded bg-gray-300 text-white text-[18px] font-medium"}>Book Service {isLoading ?? <span className="loading loading-dots loading-xs"></span>}</button>
         </form>
       </div>
     </div>
