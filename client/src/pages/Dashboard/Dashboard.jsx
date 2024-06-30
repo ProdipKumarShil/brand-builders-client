@@ -1,7 +1,6 @@
 import React from 'react'
-import man from '../../assets/icons/man.svg'
+import complete from '../../assets/icons/complete.svg'
 import { useGetServicesQuery } from '../../redux/api/api'
-import moment from 'moment'
 import Swal from 'sweetalert2'
 import deleteImg from '../../assets/icons/delete.svg'
 
@@ -12,8 +11,8 @@ const Dashboard = () => {
   return (
     <div>
       <div className="flex gap-2 items-center pb-5 ">
-        <img className='size-8' src={man} alt="" />
-        <p className='text-[24px] font-medium ' >Admin Page</p>
+        <img className='size-8' src={complete} alt="" />
+        <p className='text-[24px] font-medium ' >Completed Service({completedServices?.length})</p>
       </div>
       <div className="overflow-x-auto">
         <table className="table">
@@ -22,7 +21,6 @@ const Dashboard = () => {
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th>Date</th>
               <th>Service</th>
               <th>Status</th>
               <th>Message</th>
@@ -98,7 +96,6 @@ const TR = ({ service }) => {
       <td>
         {service?.email}
       </td>
-      <td>{moment(service?.date).format('MMMM Do YYYY')}</td>
       <td>{service?.service}</td>
       <td>
         <div className="flex items-center gap-2">

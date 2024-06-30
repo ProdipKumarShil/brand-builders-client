@@ -18,7 +18,7 @@ const DServicePage = () => {
     <div className=''>
       <div className="flex gap-2 items-center pb-5">
         <img className='size-8' src={services} alt="" />
-        <p className='text-[24px] font-medium ' >Service Page {data?.count}</p>
+        <p className='text-[24px] font-medium ' >Service Page ({data?.count})</p>
       </div>
       <div className="overflow-x-auto">
         <table className="table">
