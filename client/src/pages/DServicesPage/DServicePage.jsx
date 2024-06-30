@@ -154,12 +154,9 @@ const TH = ({ service, refetch }) => {
           <button onClick={handleSuccess} disabled={handleStatus()} className=' p-[6px] mask btn mask-squircle bg-green-500'><img className='size-4' src={check} alt="" /></button>
         </div>
       </th>
-      {/* You can open the modal using document.getElementById('ID').showModal() method */}
-      {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button> */}
       <dialog id={`${service?._id}`} className="modal">
         <div className="modal-box">
           <form method="dialog">
-            {/* if there is a button in form, it will close the modal */}
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
           </form>
           <h3 className="font-bold text-lg">Message from, {service?.name}</h3>
